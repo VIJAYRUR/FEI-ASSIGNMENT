@@ -1,8 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import Header from './components/Header';
 import StockTable from './components/StockTable';
-import StockChart from './components/StockChart';
-import SimpleChart from './components/SimpleChart';
 import RechartsStockChart from './components/RechartsStockChart';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';

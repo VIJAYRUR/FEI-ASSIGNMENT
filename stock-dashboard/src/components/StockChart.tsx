@@ -1,14 +1,5 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
   ChartData,
   ChartOptions
 } from 'chart.js';
@@ -171,11 +162,11 @@ const StockChart = ({ stocks, selectedStocks }: StockChartProps) => {
   };
 
   // Render the appropriate chart based on chartType
-  const renderChart = (type: ChartType, data: ChartData<'bar' | 'line'>, options: ChartOptions<'bar' | 'line'>) => {
+  const renderChart = (type: ChartType, data: any, options: any) => {
     if (type === 'line') {
-      return <Line data={data} options={options} />;
+      return <Line data={data as any} options={options as any} />;
     }
-    return <Bar data={data} options={options} />;
+    return <Bar data={data as any} options={options as any} />;
   };
 
   // Check if we have data to display
